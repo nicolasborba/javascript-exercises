@@ -1,3 +1,5 @@
+let reverseResult = '';
+
 const reversePrint = function(charactersLeft, string, reverseResult) {
 
   if (charactersLeft > 0) {
@@ -5,25 +7,23 @@ const reversePrint = function(charactersLeft, string, reverseResult) {
     reverseResult = reverseResult + string[charactersLeft-1];
     charactersLeft--;
     
-    reversePrint(charactersLeft, string, reverseResult);
-    return reverseResult;
-
+    return reversePrint(charactersLeft, string, reverseResult);
+    
   } else {
-    return reverseResult;
+    return reverseResult 
   }
-
+  
 }
 
 const reverseString = function(string) {
 
 let stringLength = string.length;
 let charactersLeft = stringLength;
-let reverseResult = '';
 
-reversePrint(charactersLeft, string, reverseResult);
+return reversePrint(charactersLeft, string, reverseResult);
 
- 
 };
+
 
 // Do not edit below this line
 module.exports = reverseString;
