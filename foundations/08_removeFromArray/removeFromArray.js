@@ -6,7 +6,9 @@ const removeFromArray = function(array) {
 
     //search for arguments[i] in array
 
-    let foundIndex = resultArray.findIndex(item => item == arguments[i]);
+    for (item of array) {
+
+      let foundIndex = resultArray.findIndex(item => item === arguments[i]);
 
     if ((foundIndex) != -1) {
 
@@ -15,6 +17,10 @@ const removeFromArray = function(array) {
         resultArray.splice(foundIndex, 1);
 
     }
+
+    }
+
+   
     
 
   }
